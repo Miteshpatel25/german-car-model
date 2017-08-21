@@ -1,0 +1,34 @@
+<br>
+<div class="container">
+<div class="row">
+  {{ $url := "/data/bmwcsv.csv" }}
+  {{ $sep := "," }}
+  {{ range $i, $r := getCSV $sep $url }}
+    {{ if eq $i 0 }}
+    {{else}}
+    <div class="col-md-3">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+                <div class="product-imitation">
+                    <img src="{{ index $r 13 }}" alt="" height="200px;" width="200px;">
+                </div>
+                <div class="product-desc">
+                    <span class="product-price">
+                        Price: ${{ index $r 7 }}
+                    </span>
+                    <small class="text-muted">Category</small>
+                    <a href="#" class="product-name">{{ index $r 1 }}</a>
+                    <!-- <div class="small m-t-xs">
+                        Many desktop publishing packages and web page editors now.
+                    </div> -->
+                    <div class="m-t text-righ">
+                        <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{end}}
+  {{ end }}
+</div>
+</div>
