@@ -1,5 +1,5 @@
 module.exports = (dato, root, i18n) => {
-  console.log(dato.landingPages);
+  // console.log(dato.landingPages);
   dato.landingPages.forEach((landingPages, i) => {
     root.createPost(`content/landpage/${landingPages.lpUrl}.md`, "yaml",{
       frontmatter: {
