@@ -9,7 +9,7 @@
   <!-- CSS -->
   {{ $purecss := "https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/" }}
   <link rel="stylesheet" href="{{ $purecss }}pure-min.css">
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   {{ "<!--[if lte IE 8]>" | safeHTML }}
   <link rel="stylesheet" href="{{ $purecss }}grids-responsive-old-ie-min.css">
   {{ "<![endif]-->" | safeHTML }}
@@ -56,5 +56,4 @@
   {{ range .Site.Params.custom_js }}
     <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
   {{ end }}
-
 </head>
