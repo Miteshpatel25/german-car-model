@@ -20,12 +20,23 @@
             </li>
             {{ end }}
           </ul>
+        </li>
       {{else}}
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
       {{end}}
         </li>
       {{end}}
+
+      {{ range (where .Site.Pages "Section" "landpage") }}
+        {{ if eq .Title "Landpages" }}
+
+        {{else}}
+            <li class="pure-menu-item">
+              <a class="pure-menu-link" href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{end}}
+      {{ end }}
     </ul>
   </div>
 
