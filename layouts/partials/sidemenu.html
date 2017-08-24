@@ -39,7 +39,9 @@
       {{ end }}
     </ul>
   </div>
-
+  {{ if eq .Title "Product" }}
+    {{ partial "filter.html" . }}
+  {{ end }}
   <!-- {{ partial "social.html" . }}
 
   {{ partial "copyright.html" . }} -->
