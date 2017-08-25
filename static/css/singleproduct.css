@@ -66,8 +66,7 @@
 
 @media only screen and (max-width: 500px) {
   .productimage{
-    height: 200px;
-    width: 150px;
+    max-width: 100%;
     padding: 0;
   }
   .my_title{
@@ -88,6 +87,11 @@
   }
   .mobileviewsidebar{
     display: block;
+  }
+  .desktopview{
+    display: none;
+  }
+  .bgcolormy{
     background-color: #e8ebef;
   }
 }
