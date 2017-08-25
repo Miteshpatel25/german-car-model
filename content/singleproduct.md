@@ -1,8 +1,8 @@
 +++
-title = "Single Product Page"
+title = "Product Page"
 date = "2017-08-21"
 sidemenu = "true"
-description = "Single Product Page"
+description = "Product Page"
 id = "singleproduct"
 +++
 
