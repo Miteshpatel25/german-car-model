@@ -60,6 +60,10 @@
   width: 100%;
 }
 
+.mobileviewsidebar{
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
   .productimage{
     height: 200px;
@@ -81,6 +85,10 @@
   }
   .my_rightbar{
     display: none;
+  }
+  .mobileviewsidebar{
+    display: block;
+    background-color: #e8ebef;
   }
 }
 
