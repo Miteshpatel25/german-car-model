@@ -1,0 +1,17 @@
+.entry-header{
+  display: block;
+  text-align: center;
+}
+.entry-title{
+  text-decoration: none;
+  padding: 15px;
+  color: black;
+}
+@media only screen and (max-width: 500px) {
+  .entry-title{
+    font-size:12px;
+  }
+  .book-author{
+    font-size: 10px;
+  }
+}
