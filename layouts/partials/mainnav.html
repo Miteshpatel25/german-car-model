@@ -39,5 +39,13 @@
           <li class="pure-menu-item mylink"><a href="{{ .URL }}" class="pure-menu-link">{{ .Name }}</a></li>
         {{end}}
         {{end}}
+
+        {{ range (where .Site.Pages "Section" "landpage") }}
+          {{ if eq .Title "Landpages" }}
+
+          {{else}}
+              <li class="pure-menu-item mylink"><a href="{{ .Permalink }}" class="pure-menu-link">{{ .Title }}</a></li>
+          {{end}}
+        {{ end }}
     </ul>
 </div>
