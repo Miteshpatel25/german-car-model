@@ -1,3 +1,11 @@
+.mybar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+}
 .site-header{
   padding: 0;
   max-width: 1280px;
@@ -42,6 +50,7 @@
   background-color: #e1e9ee;
   max-width: 1280px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 .mylink a {
   color: black;
