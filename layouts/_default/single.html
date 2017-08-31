@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
 
-<div class="header">
+<!-- <div class="header">
   <h1>{{ .Title }}</h1>
   <h2>{{ .Description }}</h2>
-</div>
+</div> -->
 <div class="content">
   {{ if (isset .Params "id") }}
     {{ partial .Params.id . }}

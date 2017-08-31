@@ -1,13 +1,13 @@
 <br><br>
 <div class="pure-g">
     <div class="pure-u-24-24">
-      <h2 class="product_title">Product Title Goes Here</h2>
+      <h2 class="product_title">{{ .Title }}</h2>
     </div>
 </div>
 <div class="pure-g desktopview">
     <div class="pure-u-7-24 hover01">
       <figure id="imghover">
-        <img src="/img/productimage.jpg" class="productimage" alt="" />
+        <img src="{{ .Params.image.url }}" class="productimage" alt="" />
       </figure>
     </div>
     <div class="pure-u-10-24">
@@ -15,37 +15,45 @@
         <table class="table" width="30%">
           <tr>
             <th>Brand:</th>
-            <td>BMW</td>
+            <td>{{ .Params.brand }}</td>
           </tr>
           <tr>
             <th>Series:</th>
-            <td>7 Series</td>
+            <td>{{ .Params.series }}</td>
           </tr>
           <tr>
-            <th>Model:</th>
-            <td>118</td>
+            <th>Platform:</th>
+            <td>{{ .Params.platiform }}</td>
           </tr>
           <tr>
-            <th>Type:</th>
-            <td>Car</td>
+            <th>Body Type:</th>
+            <td>{{ .Params.body_type }}</td>
           </tr>
           <tr>
             <th>Engine:</th>
-            <td>D07</td>
+            <td>{{ .Params.engine }}</td>
           </tr>
           <tr>
             <th>Petrol/Deisel:</th>
-            <td>Petrol</td>
+            <td>{{ .Params.fuel_type }}</td>
           </tr>
           <tr>
             <th>Year:</th>
-            <td>2014</td>
+            <td>{{ .Params.year }}</td>
+          </tr>
+          <tr>
+            <th>Manual Type:</th>
+            <td>{{ .Params.manual_type }}</td>
+          </tr>
+          <tr>
+            <th>Price:</th>
+            <td>{{ .Params.product_price }}</td>
           </tr>
         </table>
       </div>
     </div>
     <div class="pure-u-7-24 my_rightbar">
-      <h2 class="rightbar_title">Description</h2>
+      <!-- <h2 class="rightbar_title">Description</h2>
       <p class="rightbar_tagline">This Text is expmple text for some text.</p>
       <section class="form">
         <form class="" action="index.html" method="post">
@@ -59,13 +67,13 @@
           </div>
           <button type="submit" class="mybtn">Submit</button>
         </form>
-      </section>
+      </section> -->
     </div>
 </div>
 
 <div class="pure-g mobileviewsidebar">
     <div class="pure-u-24-24">
-      <img src="/img/productimage.jpg" class="productimage" alt="">
+      <img src="{{ .Params.image.url }}" class="productimage" alt="" />
     </div>
 </div>
 <div class="pure-g mobileviewsidebar">
@@ -74,31 +82,39 @@
         <table class="table" width="30%">
           <tr>
             <th>Brand:</th>
-            <td>BMW</td>
+            <td>{{ .Params.brand }}</td>
           </tr>
           <tr>
             <th>Series:</th>
-            <td>7 Series</td>
+            <td>{{ .Params.series }}</td>
           </tr>
           <tr>
-            <th>Model</th>
-            <td>118</td>
+            <th>Platform:</th>
+            <td>{{ .Params.platiform }}</td>
           </tr>
           <tr>
-            <th>Type:</th>
-            <td>Car</td>
+            <th>Body Type:</th>
+            <td>{{ .Params.body_type }}</td>
           </tr>
           <tr>
             <th>Engine:</th>
-            <td>D07</td>
+            <td>{{ .Params.engine }}</td>
           </tr>
           <tr>
             <th>Petrol/Deisel:</th>
-            <td>Petrol</td>
+            <td>{{ .Params.fuel_type }}</td>
           </tr>
           <tr>
             <th>Year:</th>
-            <td>2014</td>
+            <td>{{ .Params.year }}</td>
+          </tr>
+          <tr>
+            <th>Manual Type:</th>
+            <td>{{ .Params.manual_type }}</td>
+          </tr>
+          <tr>
+            <th>Price:</th>
+            <td>{{ .Params.product_price }}</td>
           </tr>
         </table>
       </div>
@@ -106,7 +122,7 @@
 </div>
 <div class="pure-g mobileviewsidebar bgcolormy">
     <div class="pure-u-24-24 my_rightbar1">
-      <h2 class="rightbar_title">Description</h2>
+      <!-- <h2 class="rightbar_title">Description</h2>
       <p class="rightbar_tagline">This Text is expmple text for some text.</p>
       <section class="form">
         <form class="" action="index.html" method="post">
@@ -120,7 +136,7 @@
           </div>
           <button type="submit" class="mybtn">Submit</button>
         </form>
-      </section>
+      </section> -->
     </div>
 </div>
 

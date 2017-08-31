@@ -16,6 +16,14 @@
                   <li class="pure-menu-item"><a href="{{ .Permalink }}" class="pure-menu-link mynew">{{ .Title }}</a></li>
               {{end}}
             {{ end }}
+
+            {{ if .IsTranslated }}
+              &middot; {{ i18n "translations" }}
+              {{ range .Translations }}
+                  {{ $curLang := index (where $.Site.Languages "Lang" .Lang) 0 }}
+                  <a href="{{ .Permalink }}">{{ $curLang.LanguageName }}</a>
+              {{ end }}
+            {{ end }}
           </ul>
         </div>
       </div>
@@ -24,6 +32,15 @@
 <div class="pure-menu pure-menu-horizontal pure-menu-scrollable myanothermenu">
     <ul class="pure-menu-list">
         <!-- <li class="pure-menu-item mylink"><a href="#" class="pure-menu-link">Home</a></li> -->
+        {{ $url := "/data/bmwcsv.csv" }}
+        {{ $sep := "," }}
+
+        {{ range $i, $r := getCSV $sep $url }}
+          {{ if eq $i 0 }}{{ else }}
+
+          {{ end }}
+        {{ end }}
+
         {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <li class="pure-menu-item pure-menu-has-children">
